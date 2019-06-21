@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <DatabaseConfig>
+        <host>192.168.1.12</host>
+        <user>ludo</user>
+        <password>Bonjour</password>
+        <dbname>peak</dbname>
+    </DatabaseConfig>
+    <GameServerConfig>
+        <ip>127.0.0.1</ip>
+        <port>5555</port>
+        <regionalVersion>0</regionalVersion>
+    </GameServerConfig>
+    <RealmServerConfig>
+        <port>444</port>
+        <checkDofusVersion>true</checkDofusVersion>
+        <dofusVersion>1.29.1</dofusVersion>
+        <cryptIp>true</cryptIp>
+    </RealmServerConfig>
+    <WorldConfig>
+        <saveDelay>3600</saveDelay>
+        <inactivityDelay>15</inactivityDelay>
+        <maxIncarnamLevel>200</maxIncarnamLevel>
+        <maxClients>20</maxClients>
+        <maxIpPerClient>4</maxIpPerClient>
+        <maxGroupSize>8</maxGroupSize>
+        <welcomeMessage><![CDATA[Bienvenue sur <b>Crisis Beta</b> ! Tapez <b>.help</b> pour en savoir plus.]]></welcomeMessage>
+        <reloadLiveActionsDelay>10</reloadLiveActionsDelay>
+        <characterCreation>
+            <nameRegex><![CDATA[^[a-zA-Z]+\-?[a-zA-Z]+$]]></nameRegex>
+            <minLength>3</minLength>
+            <maxLength>20</maxLength>
+            <forbidden>
+                <contains>admin</contains>
+                <start>mj</start>
+                <start>modo</start>
+                <end>mj</end>
+                <end>modo</end>
+                <equals>v4vx</equals>
+            </forbidden>
+            <maxCharPerAccount>10</maxCharPerAccount>
+            <startKamas>0</startKamas>
+            <startLevel>1</startLevel>
+        </characterCreation>
+        <life>
+            <spawnMonstersDelay>30</spawnMonstersDelay>
+            <refreshInteractiveObjectsDelay>60</refreshInteractiveObjectsDelay>
+            <moveSpritesDelay>60</moveSpritesDelay>
+            <moveSpritesDistance>5</moveSpritesDistance>
+            <respawnFixedMonstersDelay>10</respawnFixedMonstersDelay>
+        </life>
+        <chat>
+            <commandStart>.</commandStart>
+            <tradeFloodTime>45000</tradeFloodTime>
+            <recruitmentFloodTime>45000</recruitmentFloodTime>
+            <alignmentFloodTime>5000</alignmentFloodTime>
+        </chat>
+        <store>
+            <playerStoreTaxRate>0.001</playerStoreTaxRate>
+            <maxPlayerStorePerMap>5</maxPlayerStorePerMap>
+        </store>
+        <mount>
+            <allowCreateMountWithFakeCertif>true</allowCreateMountWithFakeCertif>
+            <defaultName>Sans nom</defaultName>
+            <loadMountParksWithMapData>false</loadMountParksWithMapData>
+        </mount>
+        <job>
+            <!-- time = defaultHarvestTime - (jobLevel * winHarvestTimeWinPerLevel) -->
+            <defaultHarvestTime>12000</defaultHarvestTime>
+            <winHarvestTimeWinPerLevel>100</winHarvestTimeWinPerLevel>
+            
+            <!-- minDrop = harvestDropBase + (jobLevel - jobSkillLevel) * winHarvestDropPerLevel -->
+            <!-- maxDrop = minDrop + harvestDropMaxBonus -->
+            <winHarvestDropPerLevel>0.2</winHarvestDropPerLevel>
+            <harvestDropBase>1</harvestDropBase>
+            <harvestDropMaxBonus>1</harvestDropMaxBonus>
+            
+            <!-- harvestXpWin = jobSkillLevel * harvestWinXpPerSkillLevel + baseHarvestWinXp -->
+            <harvestWinXpPerSkillLevel>0.5</harvestWinXpPerSkillLevel>
+            <baseHarvestWinXp>10</baseHarvestWinXp>
+            <minJobsLevelToLearnNew>30</minJobsLevelToLearnNew>
+            <minMageJobLevel>65</minMageJobLevel>
+        </job>
+        <rate>
+            <jobXp>10</jobXp>
+        </rate>
+        <fight>
+            <conquestPlacementTime>60000</conquestPlacementTime>
+            <defaultPlacementTime>45000</defaultPlacementTime>
+            <monsterEmoteChance>10</monsterEmoteChance>
+        </fight>
+        <player>
+            <capitalPointsPerLevel>5</capitalPointsPerLevel>
+            <spellPointsPerLevel>1</spellPointsPerLevel>
+            <addXpOnMaxLevel>false</addXpOnMaxLevel>
+            <addHonorOnMax>false</addHonorOnMax>
+            <addJobXpOnMaxLevel>false</addJobXpOnMaxLevel>
+            <!-- liste des niveau où l'on gagne 1 PA (spérarés par des virgules) -->
+            <bonusApLevels>100</bonusApLevels>
+            <enableEnergy>false</enableEnergy>
+        </player>
+    </WorldConfig>
+</config>

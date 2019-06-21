@@ -1,0 +1,55 @@
+# Fichier de configuration du serveur Ancestra_Remake
+
+# Configuration générale
+GAME_PORT = 444
+REALM_PORT = 5555
+DEBUG = true
+USE_IP = false
+HOST_IP = 192.168.1.12
+MOTD =Bienvenue sur <b>ancestra</b> ! Tapez .commandes pour en savoir plus.
+MOTD_COLOR = 00008B
+SEND_POLICY = false
+LOCALIP_LOOPBACK = true
+LOG = true
+LOAD_ACTION_DELAY = 900
+PLAYER_LIMIT = 500
+# Nombre compte/IP
+NB_COMPTE_PLAYER = 16
+
+# Rates
+XP_METIER = 4
+XP_PVM = 3
+DROP = 3
+KAMAS = 2
+HONOR = 1
+
+# Configuration de la base de donnée
+DB_HOST = 192.168.1.12
+DB_USER = root
+DB_PASS = Bonjour
+STATIC_DB_NAME = peak
+OTHER_DB_NAME = peak
+
+# Configuration du GamePlay
+MAX_PERSO_PAR_COMPTE = 5
+USE_MOBS = true
+START_LEVEL = 1
+START_KAMAS = 0
+ZAAP = false
+AURA_SYSTEM = true
+
+# Arenes
+ARENA_MAP = 10134,10132,10131,10133,10137,10135,10136,10138
+ARENA_TIMER = 600000
+
+# déplacement mob
+LOAD_MOVE_MOBS = 60
+
+#False = pas de gain pvp si on a la même IP!
+ALLOW_MULE_PVP = false
+
+#Map sans prismes mapID,mapID,mapID ...
+MAPS_NO_PRISMES=7411,10295
+
+#Nombre de même IP dans un combat
+FIGHT_IP = 16
